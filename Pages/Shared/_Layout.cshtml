@@ -7,36 +7,68 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Wet.styles.css" asp-append-version="true" />
+    <style>
+        @@media (min-width: 1800px) {
+            .hidden-lg {
+                margin-top: -20%;
+            }
+        }
+    </style>
 </head>
 <body class="m-0 bg-dark">
+    <div>
+        <img src="/img/bgMain2.png" class="img position-absolute img-fluid w-100 hidden-lg"/>
+    </div>
     <header>
         <nav class="navbar navbar-expand-lg justify-content-between bg-transparent">
-            <div class="navbar-brand">
-                <a href="#" class="my-3 mx-4" type="button" aria-label="Главная">
-                    <img height="60" alt="" src="/favicon.png" />    
+            <div class="me-auto">
+                <a href="#" class="my-lg-3 mx-lg-4" type="button" aria-label="Главная">
+                    <img alt="" src="/favicon.png" />    
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-lg-flex ml-lg-auto me-lg-5 h5" id="navbarNav">
+            <div class="mt-4 h5 me-lg-5" id="navbarNav">
                 <ul class="navbar-nav collapse navbar-collapse text-secondary">
                     <li class="nav-item active mx-1">
-                        <a class="nav-link" href="#"><span>Главная</span></a>
+                        <a class="nav-link" href="#"><span class="text-light">Главная</span></a>
                     </li>
+@*                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="#"><span class="text-light">О нас</span></a>
+                    </li>*@
                     <li class="nav-item mx-1">
-                        <a class="nav-link" href="#">О нас</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link" href="#">Пациенты</a>
+                        <a class="nav-link" href="#"><span class="text-light">Пациенты</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
+        @*<nav class="navbar fixed-top navbar-expand-lg navbar-transparent"> 
+            <div class="navbar-brand">
+                <a href="#" class="my-3 mx-4" type="button" aria-label="Главная">
+                    <img height="60" alt="" src="/favicon.png" />
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" > 
+                <span class="navbar-toggler-icon"></span> 
+            </button> 
+            <div class="collapse navbar-collapse h5" id="navbarSupportedContent"> 
+                <ul class="navbar-nav mr-auto"> 
+                    <li class="nav-item active"> 
+                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a> 
+                    </li> 
+                    <li class="nav-item"> <a class="nav-link" href="#">MEN</a> </li> 
+                    <li class="nav-item"> <a class="nav-link" href="#">WOMEN</a> </li> 
+                    <li class="nav-item"> <a class="nav-link" href="#">KIDS</a> </li> 
+                    <li class="nav-item"> <a class="nav-link" href="#">BOYS</a> </li> 
+                    <li class="nav-item"> <a class="nav-link" href="#">GIRLS</a> </li> 
+                </ul> 
+            </div>	
+        </nav>*@
     </header>
     
-    <div class="container-fluid">
-        <main role="main" class="pb-3">
+    <div class="container-fluid p-0">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
