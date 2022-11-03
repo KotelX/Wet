@@ -1,9 +1,53 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Узнать диагнос питомца онлайн";
+    ViewData["Header_1"] = "Узнайте последние результаты обследования прямо сейчас!";
+    ViewData["Header_2"] = "О нас";
 }
-<h1>@ViewData["Title"]</h1>
-<hr />
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div style="background: rgb(195, 197, 220);">
+    <div class="h-100">
+        <div class="d-flex justify-content-center h-75">
+            <div style="text-align: center" class="d-flex align-items-center">
+                <div>
+                    <h1>
+                        @ViewData["Title"] <br />
+                    </h1>
+                    <h2 style="color: #F4F0D4">
+                        @ViewData["Header_1"] <br />
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="container">
+        <div>
+            <div style="text-align: center; color: #474D80">
+                <h2> @ViewData["Header_2"] </h2>
+            </div>
+            <div>
+                <img src="Новая папка\index-oww.jpg" alt="Квадрат" width="200" height="200" align="right" />
+                <p style="margin-left: 10px">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br />
+                </p>
+            </div>
+            <hr />
+            <div>
+                <img src="Новая папка\index-oww.jpg" alt="Квадрат" width="200" height="200" align="left" />
+                <p style="margin-left: 10px">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br />
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
