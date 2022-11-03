@@ -8,41 +8,36 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Wet.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="m-0 bg-dark">
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a href="#" type="button" aria-label="Главная">
-                        <img height="60" src="/favicon.png">
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="h4 d-flex m-0 collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">О нас</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Пациенты</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg justify-content-between bg-transparent">
+            <div class="navbar-brand">
+                <a href="#" class="my-3 mx-4" type="button" aria-label="Главная">
+                    <img height="60" alt="" src="/favicon.png" />    
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-lg-flex ml-lg-auto me-lg-5 h5" id="navbarNav">
+                <ul class="navbar-nav collapse navbar-collapse text-secondary">
+                    <li class="nav-item active mx-1">
+                        <a class="nav-link" href="#"><span>Главная</span></a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="#">Пациенты</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
-    <div class="container">
+    
+    <div class="container-fluid">
         <main role="main" class="pb-3">
-            @RenderBody() //Код из основных страниц
-            @if (true)
-            {
-                <br />
-            }
+            @RenderBody()
         </main>
     </div>
 
