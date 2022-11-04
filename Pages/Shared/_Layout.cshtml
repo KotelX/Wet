@@ -24,8 +24,54 @@
         <img src="/img/bgMain2.png" class="img position-absolute img-fluid w-100 hidden-lg"/>
     </div>
     <header>
-        <nav class="navbar navbar-expand-lg justify-content-between bg-transparent">
-            <div class="me-auto">
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <!-- Container wrapper -->
+            <div class="container-fluid px-5 mt-2">
+                <!-- Navbar brand -->
+                <a class="navbar-brand me-2" href="#">
+                    <img src="/favicon.png"
+                         height="60"
+                         alt="W Logo"
+                         loading="lazy"
+                         style="margin-top: -1px;" />
+                </a>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarButtonsExample"
+                        aria-controls="navbarButtonsExample"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-link px-3 me-2  text-decoration-none text-primary fw-bold">
+                            Главная
+                        </button>
+                        <button type="button" class="btn btn-primary me-3">
+                            Пациенты
+                        </button>
+                    </div>
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        @*<nav class="navbar navbar-expand-lg justify-content-lg-between bg-transparent">
+            <div class="me-auto w-25 navbar-brand">
                 <a href="#" class="my-lg-3 mx-lg-4" type="button" aria-label="Главная">
                     <img alt="" src="/favicon.png" />    
                 </a>
@@ -40,13 +86,13 @@
                     </li>
 @*                    <li class="nav-item mx-1">
                         <a class="nav-link" href="#"><span class="text-light">О нас</span></a>
-                    </li>*@
+                    </li>
                     <li class="nav-item mx-1">
                         <a class="nav-link" href="#"><span class="text-light">Пациенты</span></a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav>*@
         @*<nav class="navbar fixed-top navbar-expand-lg navbar-transparent"> 
             <div class="navbar-brand">
                 <a href="#" class="my-3 mx-4" type="button" aria-label="Главная">
