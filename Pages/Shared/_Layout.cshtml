@@ -7,127 +7,108 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Wet.styles.css" asp-append-version="true" />
-    <style>
-        @@media (min-width: 1800px) {
-            .hidden-lg {
-                margin-top: -20%;
-            }
-        }
-
-        .hidden-lg{
-            z-index: -100;
-        }
-    </style>
 </head>
-<body class="m-0 bg-dark">
-    <div>
-        <img src="/img/bgMain2.png" class="img position-absolute img-fluid w-100 hidden-lg"/>
-    </div>
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-transparent">
-            <!-- Container wrapper -->
-            <div class="container-fluid px-5 mt-2">
-                <!-- Navbar brand -->
-                <a class="navbar-brand me-2" href="#">
-                    <img src="/favicon.png"
-                         height="60"
-                         alt="W Logo"
-                         loading="lazy"
-                         style="margin-top: -1px;" />
-                </a>
-
-                <!-- Toggle button -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-gradient bg-light">
+            <div class="container">
+                <img class="navbar-brand me-auto my-0" href="#" src="/favicon.png" height="40" />
                 <button class="navbar-toggler"
                         type="button"
                         data-mdb-toggle="collapse"
-                        data-mdb-target="#navbarButtonsExample"
-                        aria-controls="navbarButtonsExample"
+                        data-mdb-target="#navbarNav"
+                        aria-controls="navbarNav"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
-
-                <!-- Collapsible wrapper -->
-                <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                    <!-- Left links -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="me-auto"></div>
+                    <ul class="navbar-nav h-5">
                         <li class="nav-item">
-                            
+                            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Наши пициенты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Диагнозы</a>
                         </li>
                     </ul>
-                    <!-- Left links -->
-
-                    <div class="d-flex align-items-center">
-                        <button type="button" class="btn btn-link px-3 me-2  text-decoration-none text-primary fw-bold">
-                            Главная
-                        </button>
-                        <button type="button" class="btn btn-primary me-3">
-                            Пациенты
-                        </button>
-                    </div>
                 </div>
-                <!-- Collapsible wrapper -->
             </div>
-            <!-- Container wrapper -->
         </nav>
-        @*<nav class="navbar navbar-expand-lg justify-content-lg-between bg-transparent">
-            <div class="me-auto w-25 navbar-brand">
-                <a href="#" class="my-lg-3 mx-lg-4" type="button" aria-label="Главная">
-                    <img alt="" src="/favicon.png" />    
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="mt-4 h5 me-lg-5" id="navbarNav">
-                <ul class="navbar-nav collapse navbar-collapse text-secondary">
-                    <li class="nav-item active mx-1">
-                        <a class="nav-link" href="#"><span class="text-light">Главная</span></a>
-                    </li>
-@*                    <li class="nav-item mx-1">
-                        <a class="nav-link" href="#"><span class="text-light">О нас</span></a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link" href="#"><span class="text-light">Пациенты</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>*@
-        @*<nav class="navbar fixed-top navbar-expand-lg navbar-transparent"> 
-            <div class="navbar-brand">
-                <a href="#" class="my-3 mx-4" type="button" aria-label="Главная">
-                    <img height="60" alt="" src="/favicon.png" />
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" > 
-                <span class="navbar-toggler-icon"></span> 
-            </button> 
-            <div class="collapse navbar-collapse h5" id="navbarSupportedContent"> 
-                <ul class="navbar-nav mr-auto"> 
-                    <li class="nav-item active"> 
-                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a> 
-                    </li> 
-                    <li class="nav-item"> <a class="nav-link" href="#">MEN</a> </li> 
-                    <li class="nav-item"> <a class="nav-link" href="#">WOMEN</a> </li> 
-                    <li class="nav-item"> <a class="nav-link" href="#">KIDS</a> </li> 
-                    <li class="nav-item"> <a class="nav-link" href="#">BOYS</a> </li> 
-                    <li class="nav-item"> <a class="nav-link" href="#">GIRLS</a> </li> 
-                </ul> 
-            </div>	
-        </nav>*@
     </header>
     
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 my-5">
         <main role="main">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Wet - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted py-2">
+        <!-- Section: Links  -->
+        <section>
+            <div class="container-fluid text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+@*                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>VVet
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>*@
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Контакты</h6>
+                        <div>
+                            440066 , Россия, г Пенза
+                            <p>Тел: +7 (910) XXX XX XX</p>
+                            <p>Почта: xxxxxxxxx-xxxxx_xx@yandex.ru</p>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Полезные ссылки
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Главная</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Пациенты</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <p><i class="fas fa-home me-3"></i>Viber</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="VVet">VVet.com</a>
         </div>
+        <!-- Copyright -->
     </footer>
+    <!-- Footer -->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
