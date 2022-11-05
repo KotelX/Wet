@@ -6,38 +6,40 @@
     ViewData["Header_2"] = "О нас";
 }
 
-<div style="background: rgb(195, 197, 220); top:1000px;">
-    <div class="h-100" style="background: url(cat.jpg) no-repeat;">
-        <div class="d-flex justify-content-center h-75">
-            <div style="text-align: center" class="d-flex align-items-center">
-                <div>
-                    <h1>
-                        @ViewData["Title"] <br />
-                    </h1>
-                    <h2 style="color: #F4F0D4">
-                        @ViewData["Header_1"] <br />
-                    </h2>
+<div class="container-fluid p-0">
+    <section>
+        <div class="bg-image">
+            <img src="/img/cat.jpg" class="w-100" />
+            <div class="mask text-light d-flex justify-content-center flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                <h3 style="font-size: 3.3vw"> @ViewData["Title"] </h3>
+                <h4 style="font-size: 3vw; color: #F4F0D4"> @ViewData["Header_1"] </h4>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <hr />
+                <div style="text-align: center; color: #474D80">
+                    <h3 style="font-size: 2.5vw"> @ViewData["Header_2"] </h3>
                 </div>
+                <hr />
+                <div class="container" style="overflow:hidden; margin: 10px">
+                    <img class="" src="img\index-oww.jpg" style="width: 30%; margin: 10px;  align-items: center" alt="0" align="right" />
+                    <p style="font-size: 1.7vw; margin-top: 7.5%"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br /> </p>
+                </div>
+                <hr />
+                <div class="container" style="overflow:hidden; margin: 10px">
+                    <img src="img\index-www.jpg" style="width: 30%; margin: 10px; align-items: center" alt="1" align="left" />
+                    <p style="font-size: 1.7vw; margin-top: 7.5%"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br /> </p>
+                </div>
+                <hr />
             </div>
         </div>
-    </div>
-
-    <hr />
-
-    <div class="container">
-        <div>
-            <div style="text-align: center; color: #474D80">
-                <h2> @ViewData["Header_2"] </h2>
-            </div>
-            <div class="container" style="overflow:hidden">
-                <img class="" src="Новая папка\index-oww.jpg" style="width: 200px; align-items: center" alt="0" align="right" />
-                <p style="margin-left: 10px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br /> </p>
-            </div>
-            <hr />
-            <div class="container" style="overflow:hidden">
-                <img src="Новая папка\index-www.jpg" style="width: 200px; align-items: center" alt="1" align="left" />
-                <p style="margin-left: 20px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br /> </p>
-            </div>
-        </div>
-    </div>
+    </section>
 </div>
+
+
+
+
+
