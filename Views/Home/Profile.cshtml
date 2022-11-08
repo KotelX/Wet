@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container-fluid p-0">
+    <section>
+        <div class="bg-image">
+            <img src="/img/bgMain3.png" class="w-100" />
+            <div class="mask text-light d-flex justify-content-center flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                <h4>Информация о пациенте</h4>
+                <p class="m-0">введите номер или имя питомца</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class=" pt-5">
+            <section class="container text-center py-3">
+                <div class="row">
+                    <div class="col col-md-6 my-1">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Имя" aria-label="First name" aria-describedby="button-addon1">
+                            <button class="btn btn-outline-danger d-inline-block" type="button" id="button-addon1">Найти</button>
+                        </div>
+                    </div>
+                    <div class="col-1 d-flex my-auto justify-content-center my-1"><span>или</span></div>
+                    <div class="d-inline col-md-5 my-1 row">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Номер" aria-label="Last name" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-danger" type="button" id="button-addon2">Найти</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-3 justify-content-center flex-column text-center container">
+                <div class="h3 blueText">Симптомы</div>
+                <div class="my-3 justify-content-lg-center w-75 d-inline">
+                    @for (int i = 0; i < 10; i++)
+                    {
+                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1">FirstSimptom<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
+                    }
+                </div>
+            </section>
+            <section class="py-3 justify-content-center flex-column text-center container">
+                <div class="h3 blueText">Заболевания</div>
+                <div class="my-3 justify-content-lg-center w-75 d-inline">
+                    @for (int i = 0; i < 10; i++)
+                    {
+                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1">FirstSimptom<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
+                    }
+                </div>
+            </section>
+            <section style="height:200px;" />
+        </div>
+    </section>
+</div>
