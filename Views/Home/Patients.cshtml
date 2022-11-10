@@ -1,0 +1,46 @@
+﻿<div class="container-fluid px-0">
+    <section>
+        <div class="bg-image">
+            <img src="/img/bgMain3.png" class="w-100" />
+            <div class="mask text-light d-flex justify-content-center flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                <h4>Пациенты</h4>
+                <p class="m-0">информация о наших пациентах</p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-light container-fluid py-3">
+        <div class="container">
+            <div class="col-md-6 py-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Номер" aria-label="First name" aria-describedby="button-addon1">
+                    <button class="btn btn-outline-danger d-inline-block" type="button" id="button-addon1">Найти</button>
+                </div>
+            </div>
+            <div>
+                <table class="table bg-light text-dark overflow-scroll" style="height:100px;">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Имя</th>
+                            <th scope="col">Симптомы</th>
+                            <th scope="col">Диагнозы</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < 40; i++)
+                        {
+                           <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@@mdo</td>
+                            </tr> 
+                        }
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </section>
+</div>

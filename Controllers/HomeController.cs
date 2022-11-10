@@ -13,8 +13,15 @@ namespace Wet.Controllers
             ViewData["Title"] = "hui";
             return View();
         }
+
         [Route("/Profile")]
         public ActionResult Profile(int number = 0)
+        {
+            return View();
+        }
+
+        [Route("/Patients")]
+        public ActionResult Patients(int number = 0)
         {
             return View();
         }
