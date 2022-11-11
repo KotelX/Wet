@@ -1,37 +1,109 @@
 ﻿@{
-    //ViewData["Title"] = "Узнать диагнос питомца онлайн";
+    ViewData["Title"] = "Узнать диагнос питомца онлайн";
     ViewData["Header_1"] = "Узнайте последние результаты обследования прямо сейчас!";
     ViewData["Header_2"] = "О нас";
+    ViewData["Header_3"] = "Наши преимущества";
 }
 
-<div class="container-fluid p-0">
+<div class="container-fluid p-0" style="background-color: #71759B">
     <section>
         <div class="bg-image">
             <img src="/img/cat.jpg" class="w-100" />
             <div class="mask text-light d-flex justify-content-center flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
-                <h3 style="font-size: 3.3vw"> @ViewData["Title"] </h3>
-                <h4 style="font-size: 3vw; color: #F4F0D4"> @ViewData["Header_1"] </h4>
+                <h3 class="mt-1 text-center"> @ViewData["Title"] </h3>
+                <h4 class="mt-2 text-center text-light"> @ViewData["Header_1"] </h4>
             </div>
         </div>
     </section>
     <section>
         <div class="container">
             <div>
-                <hr />
-                <div style="text-align: center; color: #474D80">
-                    <h3 style="font-size: 2.5vw"> @ViewData["Header_2"] </h3>
-                </div>
-                <hr />
-                <div class="container m-1 overflow-hidden">
-                    <img class="" src="img\index-oww.jpg" style="width: 30%; margin: 10px;  align-items: center" alt="0" align="right" />
-                    <p style="font-size: 1.7vw; margin-top: 7.5%"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br /> </p>
-                </div>
-                <hr />
-                <div class="container" style="overflow:hidden; margin: 10px">
-                    <img src="img\index-www.jpg" style="width: 30%; margin: 10px; align-items: center" alt="1" align="left" />
-                    <p style="font-size: 1.7vw; margin-top: 7.5%"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br /> </p>
-                </div>
-                <hr />
+                <sector class="overflow-hidden">
+                    <div class="mt-2 text-center text-light">
+                        <h3 class="fs-1 mt-3"> @ViewData["Header_2"] </h3>
+                    </div>
+                    <div>
+                        <p class="fs-2 mt-3 text-light" align="center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan diam felis, nec varius dolor luctus sed. Ut consequat sit amet arcu non rhoncus. Sed at odio sollicitudin, dapibus nisi eu, facilisis ex. Vivamus eget nunc non metus vestibulum tempor. Quisque rhoncus dolor a sem elementum lacinia. Nam ac ante in tortor dignissim sodales. Aenean mattis iaculis ligula. <br /> </p>
+                    </div>
+                </sector>
+                <sector class="container-fluid">
+                    <div class="mt-2 text-center text-light">
+                        <h3 class="fs-1 mt-9"> @ViewData["Header_3"] </h3>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-sm-8">
+                            <div class="card border-1 border-dark h-100">
+                                <div class="row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">
+                                                This is a wider card with supporting text below as a natural lead-in to
+                                                additional content. This content is a little bit longer.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 rounded-2 h-100">
+                                        <img src=" img\index-www.jpg"
+                                             alt="Trendy Pants and Shoes"
+                                             class="img-fluid rounded-start bg-image h-100" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card mb-3 border-1 border-dark h-100">
+                                <div class="row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">
+                                                This is a wider card with supporting text below among ass
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between my-2">
+                            <div class="col-sm-4">
+                                <div class="card mb-3 border-1 border-dark h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">
+                                                    This is a wider card with supporting text below among ass
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="card border-1 border-dark h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">
+                                                    This is a wider card with supporting text below as a natural lead-in to
+                                                    additional content. This content is a little bit longer.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 rounded-2 h-100">
+                                            <img src=" img\index-www.jpg"
+                                                 alt="Trendy Pants and Shoes"
+                                                 class="img-fluid rounded-start bg-image h-100" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sector>
             </div>
         </div>
     </section>
