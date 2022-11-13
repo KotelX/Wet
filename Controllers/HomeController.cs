@@ -15,7 +15,6 @@ namespace Wet.Controllers
         [Route("/")]
         public ActionResult Index()
         {
-            ViewData["Title"] = "hui";
             return View();
         }
 
