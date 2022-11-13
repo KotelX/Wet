@@ -32,10 +32,10 @@
                             <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Patients">Наши пициенты</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Profile">Диагнозы</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Profile">Диагнозы</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Patients">Наши пициенты</a>
                         </li>
                     </ul>
                 </div>
@@ -56,9 +56,9 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">Контакты</h6>
                         <div>
-                            440066 , Россия, г Нижний Новгород
-                            <p>Тел: +7 (910) XXX XX XX</p>
-                            <p>Почта: xxxxxxxxx-xxxxx_xx@yandex.ru</p>
+                            <p> <a href="https://goo.gl/maps/gzBHAv8pfMYndHPu8"> 440066 , Россия, г Нижний Новгород </a></p>
+                            <p> <a href="mailto:lysyanyyva@std.mininuniver.ru"> Тел: +7 (910) XXX XX XX </a> </p>
+                            <p> <a href="tel:+79108768478"> Почта: xxxxxxxxx-xxxxx_xx@yandex.ru </a> </p>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -66,14 +66,17 @@
                             Полезные ссылки
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Главная</a>
+                            <a asp-controller="Home" asp-action="Index" class="text-reset">Главная</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Пациенты</a>
+                            <a asp-controller="Home" asp-action="Profile" class="text-reset">Диагнозы</a>
+                        </p>
+                        <p>
+                            <a asp-controller="Home" asp-action="Patients" class="text-reset">Пациенты</a>
                         </p>
                     </div>
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <p><i class="fa-brands fa-viber"></i></i>Viber</p>
+                        <p><a <a href="https://www.viber.com/ru/"> <i class="fa-brands fa-viber"></i></i>Viber </a></p>
                     </div>
                 </div>
             </div>
