@@ -7,7 +7,11 @@
                 Id = 1,
                 Name = "Cati",
                 Numer = 231,
-                Diagnozs = new() { new Models.Diagnosis() {Id = 1, Name = "Diag1" }, new Models.Diagnosis() { Id = 2, Name = "Diag2" } },
+                Diagnozs = new() { 
+                    new Models.Diagnosis() {Id = 1, Name = "Diag1" }, 
+                    new Models.Diagnosis() { Id = 2, Name = "Diag2" },
+                    new Models.Diagnosis() { Id = 3, Name = "Diag3" }
+                },
                 Simptoms = new() {
                     new() { Id = 1, Name = "Sim1"},
                     new() { Id = 3, Name = "Sim3"}
