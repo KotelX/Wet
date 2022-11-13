@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Wet.Models
+@model Patient
+
+@{
     ViewData["Title"] = "Home page";
 }
 
@@ -34,9 +37,9 @@
             <section class="py-3 justify-content-center flex-column text-center container">
                 <div class="h3 blueText">Симптомы</div>
                 <div class="my-3 justify-content-lg-center w-75 d-inline">
-                    @for (int i = 0; i < 10; i++)
+                    @for (int i = 0; i < Model.Simptoms.Count(); i++)
                     {
-                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1">FirstSimptom<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
+                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1">@Model.Simptoms[i].Name<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
                     }
                 </div>
             </section>

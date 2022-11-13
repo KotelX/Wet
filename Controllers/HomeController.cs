@@ -21,7 +21,7 @@ namespace Wet.Controllers
         [Route("/Profile")]
         public ActionResult Profile(int number = 0)
         {
-            return View();
+            return View(new Datas().Patients.FirstOrDefault());
         }
 
         [Route("/Patients")]
