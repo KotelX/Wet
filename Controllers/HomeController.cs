@@ -7,6 +7,11 @@ namespace Wet.Controllers
     [Route("{action}")]
     public class HomeController : Controller
     {
+        public HomeController(WetContext context)
+        {
+            var pat = context.Patients.ToList();
+            var sim = context.Simptoms.ToList();
+        }
         [Route("/")]
         public ActionResult Index()
         {
