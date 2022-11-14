@@ -17,3 +17,7 @@
         }
     }
 }
+
+function httpGet(number) {
+    location.replace("?number=" + number);
+}
