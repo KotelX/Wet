@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using Wet.Models;
 
 namespace Wet.Controllers
 {
@@ -21,7 +22,8 @@ namespace Wet.Controllers
         [Route("/Profile")]
         public ActionResult Profile(int number = 0)
         {
-            return View(new Datas().Patients.FirstOrDefault());
+            return View(new Datas().Patients.FirstOrDefault(x => x.Numer == number));
+            
         }
 
         [Route("/Patients")]

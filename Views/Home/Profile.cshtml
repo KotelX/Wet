@@ -11,15 +11,14 @@
             <img src="/img/bgMain3.png" class="w-100" />
             <div class="mask text-light d-flex justify-content-center flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
                 <h4>Информация о пациенте</h4>
-                <p class="m-0">введите номер или имя питомца</p>
+                <p class="m-0">введите номер пациента</p>
             </div>
         </div>
     </section>
     <section>
         <div class=" pt-5">
             <section class="container text-center py-3">
-                <div class="row">
-                    
+                <div class="row justify-content-center">
                     <div class="d-inline col-md-5 my-1 row">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Номер пациента" aria-label="Last name" aria-describedby="button-addon2" id="number">
@@ -33,24 +32,33 @@
                     }
                 </script>
             </section>
-            <section class="py-3 justify-content-center flex-column text-center container">
-                <div class="h3 blueText">Симптомы</div>
-                <div class="my-3 justify-content-lg-center w-75 d-inline">
-                    @for (int i = 0; i < Model.Simptoms.Count(); i++)
-                    {
-                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1"> @Model.Simptoms[i].Name<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
-                    }
-                </div>
-            </section>
-            <section class="py-3 justify-content-center flex-column text-center container">
-                <div class="h3 blueText">Заболевания</div>
-                <div class="my-3 justify-content-lg-center w-75 d-inline">
-                    @for (int i = 0; i < Model.Diagnozs.Count(); i++)
-                    {
-                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1"> @Model.Diagnozs[i].Name<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
-                    }
-                </div>
-            </section>
+            @if (Model is not null)
+            {
+                <section class="py-3 justify-content-center flex-column text-center container">
+                    <div class="h3 blueText">Симптомы</div>
+                    <div class="my-3 justify-content-lg-center w-75 d-inline">
+                        @for (int i = 0; i < Model.Simptoms.Count(); i++)
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1"> @Model.Simptoms[i].Name<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
+                        }
+                    </div>
+                </section>
+                <section class="py-3 justify-content-center flex-column text-center container">
+
+                    <div class="h3 blueText">Заболевания</div>
+                    <div class="my-3 justify-content-lg-center w-75 d-inline">
+                        @for (int i = 0; i < Model.Diagnozs.Count(); i++)
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto mx-1 px-2 my-1"> @Model.Diagnozs[i].Name<i class="fa-solid fa-xmark ms-2 me-1"></i></div>
+                        }
+                    </div>
+                </section>
+            } else 
+            {
+                <section class="py-3 justify-content-center flex-column text-center container">
+                    <div class="h3 blueText"> Введите номер существующего пациента </div>
+                </section>
+            }
             <section style="height:200px;" />
         </div>
     </section>
