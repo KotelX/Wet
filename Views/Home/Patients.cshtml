@@ -1,4 +1,7 @@
-﻿<div class="container-fluid px-0">
+﻿@using Wet.Models
+@model List<Patient>
+
+<div class="container-fluid px-0">
     <section>
         <div class="bg-image">
             <img src="/img/bgMain3.png" class="w-100" />
@@ -12,12 +15,12 @@
         <div class="container">
             <div class="col-md-6 py-3">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Номер" aria-label="First name" aria-describedby="button-addon1">
-                    <button class="btn btn-outline-danger d-inline-block" type="button" id="button-addon1">Найти</button>
+                    <input type="text" class="form-control" placeholder="Номер" aria-label="First name" aria-describedby="button-addon1" id="number">
+                    <button class="btn btn-outline-danger d-inline-block" type="button" onclick="myFunction();">Найти</button>
                 </div>
             </div>
             <div>
-                <table class="table bg-light text-dark overflow-scroll" style="height:100px;">
+                <table class="table bg-light text-dark overflow-scroll" style="height:100px;" id="tabble_main">
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
@@ -27,20 +30,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @for (int i = 0; i < 40; i++)
+                        @foreach (var patient in Model)
                         {
                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@@mdo</td>
-                            </tr> 
-                        }
-                        
+                                <th scope="row">@patient.Numer</th>
+                                <td>@patient.Name</td>
+                                <td>
+                                    @foreach (var item in patient.Simptoms)
+                                    {
+                                        @(item.Name + " ")
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in patient.Diagnozs)
+                                    {
+                                        @(item.Name + " ")
+                                    }
+                                </td>
+                            </tr>       }
                     </tbody>
                 </table>
             </div>
-            
         </div>
     </section>
 </div>

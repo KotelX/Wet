@@ -27,7 +27,7 @@ namespace Wet.Controllers
         [Route("/Patients")]
         public ActionResult Patients(int number = 0)
         {
-            return View();
+            return View(new Datas().Patients);
         }
 
     }
