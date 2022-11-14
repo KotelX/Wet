@@ -1,4 +1,4 @@
-﻿function myFunction() {;
+﻿function filterByNumber() {;
     var input = $('#number')[0].value;
     var tr = $("#tabble_main tr");
     for (i = 1; i < tr.length; i++)
