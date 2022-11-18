@@ -6,7 +6,7 @@ namespace Wet.Models
     public class Patient
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
         public string Name { get; set; }
         public long Numer { get; set; }
