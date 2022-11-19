@@ -2,9 +2,11 @@
 
 namespace Wet.Controllers
 {
+    [Route("/")]
     public class WorkerController : Controller
     {
-        public IActionResult Index()
+        [Route("/login")]
+        public IActionResult Login()
         {
             return View();
         }

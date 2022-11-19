@@ -7,11 +7,13 @@
 
 html {
   position: relative;
-  min-height: 100%;
 }
 
 body {
     font-family: Georgia, 'Tinos', Times, serif;
+    min-height: 100vh;
+    flex-direction:column;
+    display:flex;
 }
 
 .bg-image {
@@ -36,6 +38,10 @@ body {
 
 .bg-blue-light {
     background: #C3C5DC;
+}
+
+.bg-blue {
+    background: #BCBED3;
 }
 
 .bg-blue-dark {
