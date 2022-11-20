@@ -60,6 +60,5 @@ namespace Wet.Controllers
         {
             return View(context.Patients.Include(y => y.Simptoms).Include(j => j.Diagnozs).ToList());
         }
-
     }
 }

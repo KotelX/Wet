@@ -21,12 +21,11 @@
 function httpGet(number) {
     location.replace("?number=" + number);
 }
+
 (function () {
     'use strict';
     window.addEventListener('load', function () {
-        // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
         var forms = document.getElementsByClassName('needs-validation');
-        // Зацикливайтесь на них и предотвращайте подчинение
         var validation = Array.prototype.filter.call(forms, function (form) {
             form.addEventListener('submit', function (event) {
                 if (form.checkValidity() === false) {
@@ -38,3 +37,33 @@ function httpGet(number) {
         });
     }, false);
 })();
+
+function deliteSimptom(patientId, simptomId) {
+    const formData = new FormData();
+    formData.append('patient', patientId);
+    formData.append('diagnoz', simptomId);
+
+    if (fetch('/PatientsInfoDeliteSimptom', {
+        method: 'DELETE',
+        body: formData
+    })) {
+        console.log(simptomId + 200000);
+        var btn = document.getElementById(simptomId + 200000);
+        btn.remove();
+    }
+}
+
+function deliteDiagnoz(patientId, diagnozId) {
+    const formData = new FormData();
+    formData.append('patient', patientId);
+    formData.append('diagnoz', diagnozId); 
+
+    if (fetch('/PatientsInfoDeliteDiagnoz', {
+        method: 'DELETE',
+        body: formData
+    })) {
+        console.log(diagnozId + 200000000);
+        var btn = document.getElementById(diagnozId + 200000000);
+        btn.remove();
+    }
+}
