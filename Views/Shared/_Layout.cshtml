@@ -37,13 +37,18 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Home" asp-action="Patients">Наши пициенты</a>
                         </li>
+                        @if(true){
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Patients">Стрельцов А.</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     
-    <main role="main" class="flex-grow-1">
+    <main role="main" class="flex-grow-1 bg-blue">
         @RenderBody()
     </main>
     

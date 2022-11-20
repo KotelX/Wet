@@ -1,8 +1,8 @@
-﻿<div class="container-fluid bg-blue h-100">
+﻿<div> 
     <section class="container py-3 col-md-6">
-        <form class="needs-validation" novalidate>
-            <input type="email" class="form-control my-2" placeholder="Логин" required>
-            <input type="password" class="form-control my-2" id="password" placeholder="Пароль" required>
+        <form class="needs-validation" method="post" action="/login" novalidate>
+            <input type="email" name="login" class="form-control my-2" placeholder="Логин" required>
+            <input type="password" name="password" class="form-control my-2" id="password" placeholder="Пароль" required>
             <button type="submit" class="btn btn-primary my-2">Войти</button>
         </form>
     </section>
