@@ -52,6 +52,10 @@ body {
     color: #474D80;
 }
 
+.bg-blue-primary {
+    background: #474D80;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;

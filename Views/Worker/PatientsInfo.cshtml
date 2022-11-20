@@ -1,0 +1,72 @@
+﻿@using Wet.Models
+@model Patient
+
+<div class="container">
+    <section>
+        <div class=" pt-5">
+            <section class="container text-center my-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 my-1 row">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Номер пациента" aria-label="Last name" aria-describedby="button-addon2" id="number">
+                            <button class="btn btn-outline-danger d-inline-block" type="button" onclick="httpGet(document.getElementById('number').value);">Найти</button>
+                        </div>
+                        <div>
+                            <button class="btn bg-blue-primary text-light my-3 btn-primary border-0">Новый пациент</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @if (Model is not null)
+            {
+                <section class="py-3 justify-content-center flex-column text-center container">
+                    <div class="h3 blueText">Симптомы</div>
+                    <div class="my-3 justify-content-lg-center w-75 d-inline">
+                        @for (int i = 0; i < Model.Simptoms.Count(); i++)
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2" id="@(Model.Simptoms[i].Id + 200000)">
+                                @Model.Simptoms[i].Name
+                                <button class="border-0 bg-transparent text-light ms-1" onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        }
+                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2">
+                            <select class="form-select bg-transparent border-0 text-light" aria-label="Добавить">
+                                <option selected>Добавить</option>
+                                <option value="1">Один</option>
+                                <option value="2">Два</option>
+                                <option value="3">Три</option>
+                            </select>
+                            <button class="border-0 bg-transparent text-light ms-1">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-3 justify-content-center flex-column text-center container">
+
+                    <div class="h3 blueText">Заболевания</div>
+                    <div class="my-3 justify-content-lg-center w-75 d-inline">
+                        @for (int i = 0; i < Model.Diagnozs.Count(); i++)
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2" id="@(Model.Diagnozs[i].Id + 200000000)">
+                                @Model.Diagnozs[i].Name
+                                <button class="border-0 bg-transparent text-light ms-1" onclick="deliteDiagnoz(@Model.Numer, @Model.Diagnozs[i].Id)">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        }
+                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2">Добавить<button class="border-0 bg-transparent text-light ms-1"><i class="fa-regular fa-pen-to-square"></i></button></div>
+                    </div>
+                </section>
+            }
+            else
+            {
+                <section class="py-3 justify-content-center flex-column text-center container">
+                    <div class="h3 blueText"> Введите номер существующего пациента </div>
+                </section>
+            }
+        </div>
+    </section>
+</div>
