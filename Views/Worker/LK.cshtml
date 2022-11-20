@@ -1,66 +1,107 @@
 ﻿@{
 }
 
-<div class="container-fluid p-0 bg-blue-light">
+<section class="container-fluid p-0">
     <section class="container-fluid">
-        <div class="row pt-5">
-            <div class="col-sm-4" >
-                <div class="card mb-3 border-1 border-dark h-100">
-                    <div class="row g-0">
-                        <div class="col-md-12">
-                            <div class="card-body">
-                                <h5 class="card-title text-center" style="margin-top: 8%"> Добавить пациента</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card mb-3 border-1 border-dark h-100">
-                    <div class="row g-0">
-                        <div class="col-md-12">
-                            <div class="card-body">
-                                <h5 class="card-title text-center" style="margin-top: 8%"> Найти пациента</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card mb-3 border-1 border-dark h-100">
-                    <div class="row g-0">
-                        <div class="col-md-12">
-                            <div class="card-body">
-                                <h5 class="card-title text-center" style="margin-top: 8%"> Новый симптом</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row pt-5 overflow-hidden">
-            <div class="col-sm-6">
-                <div class="card mb-3 border-1 border-dark h-100">
-                    <div class="row g-0">
-                        <div class="col-md-12">
-                            <div class="card-body">
-                                <h5 class="card-title text-center" style="margin-top: 7%"> Новый диагноз</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card mb-3 border-1 border-dark h-100">
-                    <div class="row g-0">
-                        <div class="col-md-12">
-                            <div class="card-body">
-                                <h5 class="card-title text-center" style="margin-top: 7%"> Выход</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <section class="row pt-5 d-flex justify-content-center my-3">
+
+            <button type="button" class="borders-none btn-square-md me-4 my-2" >
+                <a class="text-decoration-none text-reset " asp-controller="Home" asp-action="Index">
+                    Добавить пациента
+                </a>
+            </button>
+            <button type="button" class="borders-none btn-square-md my-2">
+                <a class="text-decoration-none text-reset " asp-controller="Home" asp-action="Index">
+                    Найти пациента
+                </a>
+            </button>
+            <button type="button" class="borders-none btn-square-md ms-4 me-4 my-2">
+                <a class="text-decoration-none text-reset " asp-controller="Home" asp-action="Index">
+                    Новый симптом
+                </a>
+            </button>
+            <button type="button" class="borders-none btn-square-md me-4 my-2">
+                <a class="text-decoration-none text-reset " asp-controller="Home" asp-action="Index">
+                    Новый диагноз
+                </a>
+            </button>
+            <button type="button" class="borders-none btn-square-md my-2">
+                <a class="text-decoration-none text-reset " asp-controller="Home" asp-action="Index">
+                    Выход
+                </a>
+            </button>
+
+        </section>
     </section>
+</section>
+
+
+@*<div class="row pt-5">
+    <div class="col-sm-2">
+        <a class="text-decoration-none text-reset " asp-controller="Home" asp-action="Index">
+            <div class="card mb-3 border-1 border-dark h-100 ">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-top: 8%"> Добавить пациента</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <a class="text-decoration-none text-reset" asp-controller="Home" asp-action="Index">
+            <div class="card mb-3 border-1 border-dark h-100">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-top: 8%"> Найти пациента</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <a class="text-decoration-none text-reset" asp-controller="Home" asp-action="Index">
+            <div class="card mb-3 border-1 border-dark h-100">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-top: 8%"> Новый симптом</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
+<div class="row pt-5 overflow-hidden">
+    <div class="col-sm-2">
+        <a class="text-decoration-none text-reset" asp-controller="Home" asp-action="Index">
+            <div class="card mb-3 border-1 border-dark h-100">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-top: 7%"> Новый диагноз</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <a class="text-decoration-none text-reset" asp-controller="Home" asp-action="Index">
+            <div class="card mb-3 border-1 border-dark h-100">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-top: 7%"> Выход</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>*@
