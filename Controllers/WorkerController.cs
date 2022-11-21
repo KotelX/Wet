@@ -29,6 +29,12 @@ namespace Wet.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [Route("/login")]
+        public IActionResult Login(string login, string password)
+        {
+            return View();
+        }
 
         [Route("/PatientsInfo")]
         public IActionResult PatientsInfo(int number = 0)
@@ -51,8 +57,8 @@ namespace Wet.Controllers
             return Ok();
         }
 
-        [Route("/LK")]
-        public ActionResult LK()
+        [Route("/lk")]
+        public ActionResult lk()
         {
             return View();
         }
