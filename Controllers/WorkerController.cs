@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Wet.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Wet.Controllers
 {
@@ -19,12 +20,6 @@ namespace Wet.Controllers
 
         [Route("/login")]
         public IActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        [Route("/login")]
-        public IActionResult Login(string login, string password)
         {
             return View();
         }
