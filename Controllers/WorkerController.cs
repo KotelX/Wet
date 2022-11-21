@@ -50,8 +50,8 @@ namespace Wet.Controllers
             return Ok();
         }
 
-        [Route("/LK")]
-        public ActionResult LK()
+        [Route("/lk")]
+        public ActionResult lk()
         {
             return View();
         }
