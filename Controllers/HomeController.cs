@@ -1,15 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Wet.Models;
 
 namespace Wet.Controllers
 {
     [Route("{action}")]
     public class HomeController : Controller
     {
-        private WetContext context { get; } 
+        private WetContext context { get; }
         public HomeController(WetContext context)
         {
             this.context = context;
@@ -52,7 +49,7 @@ namespace Wet.Controllers
         public ActionResult Profile(int number = 0)
         {
             return View(context.Patients.Include(y => y.Simptoms).Include(j => j.Diagnozs).FirstOrDefault(x => x.Numer == number));
-            
+
         }
 
         [Route("/Patients")]

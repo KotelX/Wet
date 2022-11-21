@@ -11,7 +11,7 @@ namespace Wet
         public WetContext(DbContextOptions<WetContext> options)
         : base(options)
         {
-            Database.EnsureCreated();   
+            Database.EnsureCreated();
         }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{

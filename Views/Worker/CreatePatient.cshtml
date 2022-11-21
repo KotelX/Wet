@@ -1,0 +1,181 @@
+﻿@{
+}
+
+<section class="container-fluid pt-5 p-5">
+    <div class="blue-text-dark">
+        <h5 class="fs-4 mt-9"> Информаци о пациенте </h5>
+    </div>
+    <form class="needs-validation row" method="post" action="/" novalidate>
+        <div class="col-md-6 flex-column mb-3">
+            <div class="row">
+                <div class="my-2 col-md-6 pe-md-1">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control" name="patient_name" placeholder="Имя пациента" aria-label="Pet first name" required>
+                    </div>
+                </div>
+                <div class="my-2 col-md-6 ps-md-1">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control" name="patient_code" placeholder="Код пациента" aria-label="Pet ID name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="my-2 col-md-8">
+                    <div class="input-group">
+                        <select class="form-select" name="patient_breed" aria-label="*Выберите породу животного*" required>
+                            <option disabled selected>*Выберите породу животного*</option>
+                            <option value="1">Кот</option>
+                            <option value="2">Пес</option>
+                            <option value="3">Чел</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="my-2 col-md-4">
+                    <div class="input-group">
+                        <input type="date" class="form-control form-control" name="patient_birthday" placeholder="Дата рождения" aria-label="Pet age" required>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="my-3">
+                    <div class="input-group">
+                        <div class="btn-group">
+                            <input type="radio" class="btn-check" name="gender_m" id="option1" autocomplete="off" />
+                            <label class="btn btn-primary" for="option1">Муж.</label>
+
+                            <input type="radio" class="btn-check" name="gender_u" id="option2" autocomplete="off" checked  disabled/>
+                            <label class="btn btn-primary" for="option2">   </label>
+
+                            <input type="radio" class="btn-check" name="gender_f" id="option3" autocomplete="off" />
+                            <label class="btn btn-primary" for="option3">Жен.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blue-text-dark">
+                <h5 class="fs-4"> Информаци о владельце </h5>
+            </div>
+            <div class="row">
+                <div class="my-2 col-md-4 pe-md-1">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control" name="owner_name" placeholder="Имя владельца" aria-label="First name" required>
+                    </div>
+                </div>
+                <div class="my-2 col-md-8 ps-md-1">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control" name="owner_surname" placeholder="Фамилия владельца" aria-label="Last name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="my-2 col-md-7">
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control" name="owner_email" placeholder="Email почта" aria-label="Email" required>
+                    </div>
+                </div>
+                <div class="my-2 col-md-6">
+                    <div class="input-group">
+                        <input type="tel" class="form-control form-control" name="owner_tel" placeholder="Номер телефона" aria-label="Phone" required>
+                    </div>
+                </div>
+            </div>
+            <div class="blue-text-dark mt-2">
+                <h5 class="fs-4">Комментарий лечащего врача</h5>
+            </div>
+            <div>
+                <div class="form-group">
+                    <textarea class="form-control" name="comment" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 flex-column">
+            <div class="bg-blue-light rounded-2 text-center p-2">
+                <span class="h4 my-2">Симптомы</span>
+                <div>
+                    @for (int i = 0; i < 30; i++)
+                    {
+                        if ((i % 9) != 0)
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
+                                @*@Model.Simptoms[i].Name*@ Симптом
+                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5 border-2 border-danger border" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
+                                @*@Model.Simptoms[i].Name*@ Симптом
+                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="bg-blue-light rounded-2 text-center p-2 my-3">
+                <span class="h4 my-2">Диагнозы</span>
+                <div>
+                    @for (int i = 0; i < 30; i++)
+                    {
+                        if ((i % 9) != 0)
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
+                                @*@Model.Simptoms[i].Name*@ Диагноз
+                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5 border-2 border-danger border" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
+                                @*@Model.Simptoms[i].Name*@ Диагноз
+                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+    <div class="d-none">
+        <div style="color: #2C3053">
+            <h5 class="fs-4 mt-9"> Симптомы </h5>
+        </div>
+        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2">
+            <select class="form-select bg-transparent border-0 text-light" aria-label="Добавить">
+                <option selected>Добавить</option>
+                <option value="1">Один</option>
+                <option value="2">Два</option>
+                <option value="3">Три</option>
+            </select>
+            <button class="border-0 bg-transparent text-light ms-1">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+        </div>
+        <div style="color: #2C3053">
+            <h5 class="fs-4 mt-9"> Заболевания </h5>
+        </div>
+        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2">
+            <select class="form-select bg-transparent border-0 text-light" aria-label="Добавить">
+                <option selected>Добавить</option>
+                <option value="1">Один</option>
+                <option value="2">Два</option>
+                <option value="3">Три</option>
+            </select>
+            <button class="border-0 bg-transparent text-light ms-1">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="my-4 d-flex justify-content-center">
+        <button type="submit" class="borders-none col-4">Добавить</button>
+    </div>
+    </form>
+</section>

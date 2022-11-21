@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.EntityFrameworkCore;
-using Wet.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Wet.Controllers
@@ -52,12 +47,13 @@ namespace Wet.Controllers
         }
 
         [Route("/lk")]
-        public ActionResult lk()
+        public ActionResult Lk()
         {
             return View();
         }
-        [Route("/AddPatient")]
-        public ActionResult AddPatient()
+
+        [Route("/CreatePatient")]
+        public ActionResult CreatePatient()
         {
             return View();
         }
