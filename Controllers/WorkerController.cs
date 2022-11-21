@@ -61,5 +61,10 @@ namespace Wet.Controllers
         {
             return View();
         }
+        [Route("/AddPatient")]
+        public ActionResult AddPatient()
+        {
+            return View();
+        }
     }
 }
