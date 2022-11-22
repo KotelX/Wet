@@ -67,3 +67,51 @@ function deliteDiagnoz(patientId, diagnozId) {
         btn.remove();
     }
 }
+
+function updateCheckboxForSimptoms(label) {
+
+}
+
+function updateCheckboxForDiagnozs(label) {
+    
+}
+
+let elementsArray = document.querySelectorAll("#checkdiagnozs label");
+
+//elementsArray.forEach(function (elem) {
+//    elem.addEventListener("click", function () {
+//        console.log('Ok');
+//    });
+//});
+
+$('#activeDiagnozs div label, #unactiveDiagnozs div label').click(function () {
+    var label = $(this);
+    if (!$('#' + this.htmlFor).is(':checked')) {
+        label.children('svg').html('<i class="fa-regular fa-trash-can"></i>');
+        label.parent().addClass('border-2 border-danger border');
+        label.parent().remove(label.parent());
+        $('#activeDiagnozs').append(label.parent());
+    }
+    else {
+        label.children('svg').html('<i class="fa-solid fa-plus"></i>');
+        label.parent().removeClass('border-2 border-danger border');
+        label.parent().remove(label.parent());
+        $('#unactiveDiagnozs').append(label.parent());
+    }
+});
+
+$('#activeSimptoms div label, #unactiveSimptoms div label').click(function () {
+    var label = $(this);
+    if (!$('#' + this.htmlFor).is(':checked')) {
+        label.children('svg').html('<i class="fa-regular fa-trash-can"></i>');
+        label.parent().addClass('border-2 border-danger border');
+        label.parent().remove(label.parent());
+        $('#activeSimptoms').append(label.parent());
+    }
+    else {
+        label.children('svg').html('<i class="fa-solid fa-plus"></i>');
+        label.parent().removeClass('border-2 border-danger border');
+        label.parent().remove(label.parent());
+        $('#unactiveSimptoms').append(label.parent());
+    }
+});
