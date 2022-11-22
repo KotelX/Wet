@@ -87,57 +87,73 @@
                     <textarea class="form-control" name="comment" rows="3"></textarea>
                 </div>
             </div>
+            <div>
+                <div class="blue-text-dark row mt-2" id="activeSimptoms">
+                    <span class="fs-4 mt-9">Симптомы:</span>
+
+                    <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 py-1 h5 border-2 border-danger border">
+                        <input type="checkbox" id="simptom1234123" class="position-absolute d-none checkbox-booking" checked>
+                        <label class="border-0 bg-transparent text-light ms-1" for="simptom1234123" role="button">
+                            <span class="me-2">simptom1234123</span>
+                            <i class="fa-regular fa-trash-can"></i>
+                        </label>
+                    </div>
+                    <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 py-1 h5 border-2 border-danger border">
+                        <input type="checkbox" id="simptom1232123" class="position-absolute d-none checkbox-booking" checked>
+                        <label class="border-0 bg-transparent text-light ms-1" for="simptom1232123" role="button">
+                            <span class="me-2">simptom1232123</span>
+                            <i class="fa-regular fa-trash-can"></i>
+                        </label>
+                    </div>
+                </div>
+                <div class="blue-text-dark row mt-2" id="activeDiagnozs">
+                    <span class="fs-4 mt-9">Диагнозы:</span>
+
+                    <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 py-1 h5 border-2 border-danger border">
+                        <input type="checkbox" id="diagnoz1234123" class="position-absolute d-none checkbox-booking" checked>
+                        <label class="border-0 bg-transparent text-light ms-1" for="diagnoz1234123" role="button">
+                            <span class="me-2">diagnoz1234123</span>
+                            <i class="fa-regular fa-trash-can"></i>
+                        </label>
+                    </div>
+                    <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 py-1 h5 border-2 border-danger border">
+                        <input type="checkbox" id="diagnoz1232123" class="position-absolute d-none checkbox-booking" checked>
+                        <label class="border-0 bg-transparent text-light ms-1" for="diagnoz1232123" role="button">
+                            <span class="me-2">diagnoz1232123</span>
+                            <i class="fa-regular fa-trash-can"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-md-6 flex-column">
             <div class="bg-blue-light rounded-2 text-center p-2">
                 <span class="h4 my-2">Симптомы</span>
-                <div>
+                <div id="unactiveSimptoms">
                     @for (int i = 0; i < 30; i++)
                     {
-                        if ((i % 9) != 0)
-                        {
-                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
-                                @*@Model.Simptoms[i].Name*@ Симптом
-                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
-                                    <i class="fa-solid fa-plus"></i>
-                                </button>
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5 border-2 border-danger border" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
-                                @*@Model.Simptoms[i].Name*@ Симптом
-                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
-                                    <i class="fa-regular fa-trash-can"></i>
-                                </button>
-                            </div>
-                        }
+                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 py-1 h5">
+                            <input type="checkbox" id="simptom@(i)" class="position-absolute d-none checkbox-booking">
+                            <label class="border-0 bg-transparent text-light ms-1" for="simptom@(i)" role="button">
+                                <span class="me-2">Симптом@(i)</span>
+                                <i class="fa-solid fa-plus"></i>
+                            </label>
+                        </div>
                     }
                 </div>
             </div>
-            <div class="bg-blue-light rounded-2 text-center p-2 my-3">
+            <div class="bg-blue-light rounded-2 text-center p-2 my-3 checkdiagnozs">
                 <span class="h4 my-2">Диагнозы</span>
-                <div>
+                <div id="unactiveDiagnozs">
                     @for (int i = 0; i < 30; i++)
                     {
-                        if ((i % 9) != 0)
-                        {
-                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
-                                @*@Model.Simptoms[i].Name*@ Диагноз
-                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
-                                    <i class="fa-solid fa-plus"></i>
-                                </button>
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 h5 border-2 border-danger border" @*id="@(Model.Simptoms[i].Id + 200000)"*@>
-                                @*@Model.Simptoms[i].Name*@ Диагноз
-                                <button class="border-0 bg-transparent text-light ms-1" @*onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)"*@>
-                                    <i class="fa-regular fa-trash-can"></i>
-                                </button>
-                            </div>
-                        }
+                        <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2 py-1 h5">
+                            <input type="checkbox" id="simptom@(i)" class="position-absolute d-none checkbox-booking">
+                            <label class="border-0 bg-transparent text-light ms-1" for="simptom@(i)" role="button">
+                                <span class="me-2">Симптом@(i)</span>
+                                <i class="fa-solid fa-plus"></i>
+                            </label>
+                        </div>
                     }
                 </div>
             </div>
