@@ -68,22 +68,6 @@ function deliteDiagnoz(patientId, diagnozId) {
     }
 }
 
-function updateCheckboxForSimptoms(label) {
-
-}
-
-function updateCheckboxForDiagnozs(label) {
-    
-}
-
-let elementsArray = document.querySelectorAll("#checkdiagnozs label");
-
-//elementsArray.forEach(function (elem) {
-//    elem.addEventListener("click", function () {
-//        console.log('Ok');
-//    });
-//});
-
 $('#activeDiagnozs div label, #unactiveDiagnozs div label').click(function () {
     var label = $(this);
     if (!$('#' + this.htmlFor).is(':checked')) {
