@@ -12,7 +12,11 @@
                             <button class="btn btn-outline-danger d-inline-block" type="button" onclick="httpGet(document.getElementById('number').value);">Найти</button>
                         </div>
                         <div>
-                            <button class="btn bg-blue-primary text-light my-3 btn-primary border-0">Новый пациент</button>
+                            <button class="btn bg-blue-primary text-light my-3 btn-primary border-0 "> 
+                                <a class="text-decoration-none text-reset " asp-controller="Worker" asp-action="CreatePatient"> 
+                                    Новый пациент 
+                                    </a>
+                             </button>
                         </div>
                     </div>
                 </div>
