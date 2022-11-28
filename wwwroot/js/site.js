@@ -99,3 +99,25 @@ $('#activeSimptoms div label, #unactiveSimptoms div label').click(function () {
         $('#unactiveSimptoms').append(label.parent());
     }
 });
+
+$('#filterDiagnozs').keyup(function () {
+
+    var rex = new RegExp($(this).val(), 'i');
+    $('#unactiveDiagnozs > div').removeClass("d-inline-block");
+    $('#unactiveDiagnozs > div').hide();
+    $('#unactiveDiagnozs div label').filter(function () {
+        return rex.test($(this).text());
+    }).parent().addClass("d-inline-block").show();
+
+});
+
+$('#filterSimptoms').keyup(function () {
+
+    var rex = new RegExp($(this).val(), 'i');
+    $('#unactiveSimptoms > div').removeClass("d-inline-block");
+    $('#unactiveSimptoms > div').hide();
+    $('#unactiveSimptoms div label').filter(function () {
+        return rex.test($(this).text());
+    }).parent().addClass("d-inline-block").show();
+
+});
