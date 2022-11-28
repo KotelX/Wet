@@ -38,6 +38,12 @@ namespace Wet.Controllers
             //    }
             //});
             //context.SaveChanges();
+
+            //for (int i = 0; i < 10; i++)
+            //{
+
+            //}
+            //foreach (int i in 5)
         }
         [Route("/")]
         public ActionResult Index()
@@ -59,3 +65,4 @@ namespace Wet.Controllers
         }
     }
 }
+

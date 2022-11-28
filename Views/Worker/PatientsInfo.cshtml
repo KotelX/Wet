@@ -50,12 +50,14 @@
                 <section class="py-3 justify-content-center flex-column text-center container">
 
                     <div class="h3 blueText">Заболевания</div>
-                    <div class="my-3 justify-content-lg-center w-75 d-inline">
+                    <div class="my-3 justify-content-lg-center w-75 d-inline" id="deltiteDiagnoz">
                         @for (int i = 0; i < Model.Diagnozs.Count(); i++)
                         {
                             <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2" id="@(Model.Diagnozs[i].Id + 200000000)">
                                 @Model.Diagnozs[i].Name
-                                <button class="border-0 bg-transparent text-light ms-1" onclick="deliteDiagnoz(@Model.Numer, @Model.Diagnozs[i].Id)">
+                                <input class="patientId" type="hidden" name="patientId" value="@Model.Id" />
+                                <input class="diagnozID" type="hidden" name="diagnozId" value="@Model.Diagnozs[i].Id" />
+                                <button class="border-0 bg-transparent text-light ms-1">
                                     <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
