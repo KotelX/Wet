@@ -1,9 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace Wet.Controllers
 {
     [Route("/")]
+    [Authorize]
     public class WorkerController : Controller
     {
         private WetContext context { get; }
@@ -11,18 +16,6 @@ namespace Wet.Controllers
         public WorkerController(WetContext context)
         {
             this.context = context;
-        }
-
-        [Route("/login")]
-        public IActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        [Route("/login")]
-        public IActionResult Login(string login, string password)
-        {
-            return View();
         }
 
         [Route("/PatientsInfo")]

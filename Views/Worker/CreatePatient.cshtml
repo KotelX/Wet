@@ -129,6 +129,9 @@
         <div class="col-md-6 flex-column">
             <div class="bg-blue-light rounded-2 text-center p-2">
                 <span class="h4 my-2">Симптомы</span>
+                <div class="input-group rounded w-50 mx-md-3 my-2">
+                    <input type="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" id="filterSimptoms" />
+                </div>
                 <div id="unactiveSimptoms">
                     @for (int i = 0; i < 30; i++)
                     {
@@ -144,6 +147,9 @@
             </div>
             <div class="bg-blue-light rounded-2 text-center p-2 my-3 checkdiagnozs">
                 <span class="h4 my-2">Диагнозы</span>
+                <div class="input-group rounded w-50 mx-md-3 my-2">
+                    <input type="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" id="filterDiagnozs" />
+                </div>
                 <div id="unactiveDiagnozs">
                     @for (int i = 0; i < 30; i++)
                     {

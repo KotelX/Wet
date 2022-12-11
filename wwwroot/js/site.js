@@ -68,42 +68,9 @@ function deliteDiagnoz(patientId, diagnozId) {
     }
 }
 
-//$('#deltiteDiagnoz div button').click(function () {
-//    const formData = new FormData();
-//    formData.append('patient', $('#deltiteDiagnoz div input')[0].value); 
-//    formData.append('diagnoz', $('#deltiteDiagnoz div input')[1].value);
-
-//    console.log('patient', $('#deltiteDiagnoz div input')[0].value);
-//    console.log('diagnoz', $('#deltiteDiagnoz div input')[1].value);
-//    $.ajax({
-//        url: '/PatientsInfoDeliteDiagnoz',
-//        type: 'DELETE',
-//        data: formData,
-//        processData: false,
-//        success: function (result) {
-//            var element = $($('#deltiteDiagnoz div input')[1].value +'200000000');
-//            console.log(element.text());
-//            if (!$('#' + this.htmlFor).is(':checked')) {
-//                element.removeClass("d-inline-block");
-//                element.hide();
-//                element.remove();
-//        }
-//        }
-//    });
-
-    //if (fetch('/PatientsInfoDeliteDiagnoz', {
-    //    method: 'DELETE',
-    //    body: formData
-    //var btn = $('diagnozId + 200000000').append($(this).parent()); //&$('diagnozId + 200000000').append(label.parent());
-    //btn.remove();
-    //})) {
-    //    
-    //}
-/*})*/
-
 $('#activeDiagnozs div label, #unactiveDiagnozs div label').click(function () {
     var label = $(this);
-    if (!$('#' + this.htmlFor).is(':checked')) { //эта
+    if (!$('#' + this.htmlFor).is(':checked')) {
         label.children('svg').html('<i class="fa-regular fa-trash-can"></i>');
         label.parent().addClass('border-2 border-danger border');
         label.parent().remove(label.parent());
@@ -131,4 +98,26 @@ $('#activeSimptoms div label, #unactiveSimptoms div label').click(function () {
         label.parent().remove(label.parent());
         $('#unactiveSimptoms').append(label.parent());
     }
+});
+
+$('#filterDiagnozs').keyup(function () {
+
+    var rex = new RegExp($(this).val(), 'i');
+    $('#unactiveDiagnozs > div').removeClass("d-inline-block");
+    $('#unactiveDiagnozs > div').hide();
+    $('#unactiveDiagnozs div label').filter(function () {
+        return rex.test($(this).text());
+    }).parent().addClass("d-inline-block").show();
+
+});
+
+$('#filterSimptoms').keyup(function () {
+
+    var rex = new RegExp($(this).val(), 'i');
+    $('#unactiveSimptoms > div').removeClass("d-inline-block");
+    $('#unactiveSimptoms > div').hide();
+    $('#unactiveSimptoms div label').filter(function () {
+        return rex.test($(this).text());
+    }).parent().addClass("d-inline-block").show();
+
 });
