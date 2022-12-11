@@ -53,43 +53,43 @@ function deliteSimptom(patientId, simptomId) {
     }
 }
 
-//function deliteDiagnoz(patientId, diagnozId) {
-//    const formData = new FormData();
-//    formData.append('patient', patientId);
-//    formData.append('diagnoz', diagnozId); 
-
-//    if (fetch('/PatientsInfoDeliteDiagnoz', {
-//        method: 'DELETE',
-//        body: formData
-//    })) {
-//        console.log(diagnozId + 200000000); //73 страка для вытягивания
-//        var btn = document.getElementById(diagnozId + 200000000); //&('diagnozId + 200000000')
-//        btn.remove();
-//    }
-//}
-
-$('#deltiteDiagnoz div button').click(function () {
+function deliteDiagnoz(patientId, diagnozId) {
     const formData = new FormData();
-    formData.append('patient', $('#deltiteDiagnoz div input')[0].value); 
-    formData.append('diagnoz', $('#deltiteDiagnoz div input')[1].value);
+    formData.append('patient', patientId);
+    formData.append('diagnoz', diagnozId); 
 
-    console.log('patient', $('#deltiteDiagnoz div input')[0].value);
-    console.log('diagnoz', $('#deltiteDiagnoz div input')[1].value);
-    $.ajax({
-        url: '/PatientsInfoDeliteDiagnoz',
-        type: 'DELETE',
-        data: formData,
-        processData: false,
-        success: function (result) {
-            var element = $($('#deltiteDiagnoz div input')[1].value +'200000000');
-            console.log(element.text());
-            if (!$('#' + this.htmlFor).is(':checked')) {
-                element.removeClass("d-inline-block");
-                element.hide();
-                element.remove();
-        }
-        }
-    });
+    if (fetch('/PatientsInfoDeliteDiagnoz', {
+        method: 'DELETE',
+        body: formData
+    })) {
+        console.log(diagnozId + 200000000); //73 страка для вытягивания
+        var btn = document.getElementById(diagnozId + 200000000); //&('diagnozId + 200000000')
+        btn.remove();
+    }
+}
+
+//$('#deltiteDiagnoz div button').click(function () {
+//    const formData = new FormData();
+//    formData.append('patient', $('#deltiteDiagnoz div input')[0].value); 
+//    formData.append('diagnoz', $('#deltiteDiagnoz div input')[1].value);
+
+//    console.log('patient', $('#deltiteDiagnoz div input')[0].value);
+//    console.log('diagnoz', $('#deltiteDiagnoz div input')[1].value);
+//    $.ajax({
+//        url: '/PatientsInfoDeliteDiagnoz',
+//        type: 'DELETE',
+//        data: formData,
+//        processData: false,
+//        success: function (result) {
+//            var element = $($('#deltiteDiagnoz div input')[1].value +'200000000');
+//            console.log(element.text());
+//            if (!$('#' + this.htmlFor).is(':checked')) {
+//                element.removeClass("d-inline-block");
+//                element.hide();
+//                element.remove();
+//        }
+//        }
+//    });
 
     //if (fetch('/PatientsInfoDeliteDiagnoz', {
     //    method: 'DELETE',
@@ -99,7 +99,7 @@ $('#deltiteDiagnoz div button').click(function () {
     //})) {
     //    
     //}
-})
+/*})*/
 
 $('#activeDiagnozs div label, #unactiveDiagnozs div label').click(function () {
     var label = $(this);
