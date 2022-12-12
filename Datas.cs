@@ -40,8 +40,8 @@
             new Models.Diagnosis() {Name = "Diag3" }
         };
 
-        public List<Models.Person> Person { get; set; } = new List<Models.Person> Person { 
-        };
-        {
-        }
+        //public List<Models.Person> Person { get; set; } = new List<Models.Person> Person { 
+        //};
+        //{
+    }
 }
