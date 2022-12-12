@@ -29,6 +29,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
         };
     });
+
 builder.Services.AddRazorPages();
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<WetContext>(options => options.UseSqlServer(connection));
@@ -39,14 +40,12 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
-app.UseAuthentication();  
-app.UseAuthorization();
+
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
-
-app.UseAuthorization();
 app.MapControllers();
 
 

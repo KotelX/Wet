@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -67,10 +69,9 @@ namespace Wet.Controllers
             return View();
         }
 
-
         [HttpPost]
         [Route("/login")]
-        public string Login(string login, string password)
+        public ActionResult Login(string login, string password, HttpContext httpContext)
         {
             var claims = new List<Claim> { new Claim("Name", login) };
             // создаем JWT-токен
@@ -81,7 +82,7 @@ namespace Wet.Controllers
                     expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(2)),
                     signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
 
-            return new JwtSecurityTokenHandler().WriteToken(jwt);
+            return Ok(new JwtSecurityTokenHandler().WriteToken(jwt));
         }
     }
 }

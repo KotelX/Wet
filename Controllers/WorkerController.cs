@@ -8,7 +8,6 @@ using System.Security.Claims;
 namespace Wet.Controllers
 {
     [Route("/")]
-    [Authorize]
     public class WorkerController : Controller
     {
         private WetContext context { get; }

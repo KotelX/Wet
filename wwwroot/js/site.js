@@ -121,3 +121,23 @@ $('#filterSimptoms').keyup(function () {
     }).parent().addClass("d-inline-block").show();
 
 });
+
+$("#submitLogin").click(function (e) {
+    $.ajax({
+        type: "POST",
+        crossDomain: true,
+        url: '/login',
+        data: {
+            login: $("input[name=login]").val(),
+            password: $("input[name=password]").val()
+        },
+        success: function (data) {
+            localStorage.setItem('_token', data);
+            $("#loginForm").submit();
+            window.location.href = '/lk';
+        },
+        error: function () {
+            alert("Error");
+        }
+    });
+});
