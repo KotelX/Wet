@@ -22,11 +22,12 @@
                 <section class="py-3 justify-content-center flex-column text-center container">
                     <div class="h3 blueText">Симптомы</div>
                     <div class="my-3 justify-content-lg-center w-75 d-inline">
-                        @for (int i = 0; i < Model.Simptoms.Count(); i++)
+                        @foreach(var visit in Model.Visitings)
+                        @for (int i = 0; i < visit.Symptoms.Count(); i++)
                         {
-                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2" id="@(Model.Simptoms[i].Id + 200000)">
-                                @Model.Simptoms[i].Name
-                                <button class="border-0 bg-transparent text-light ms-1" onclick="deliteSimptom(@Model.Numer, @Model.Simptoms[i].Id)">
+                                <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2" id="@(visit.Symptoms[i].Id + 200000)">
+                                    @visit.Symptoms[i].Name
+                                    <button class="border-0 bg-transparent text-light ms-1" onclick="deliteSimptom(@Model.Numer, @visit.Symptoms[i].Id)">
                                     <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
@@ -36,7 +37,7 @@
                             <select class="form-select bg-transparent border-0 text-light select" aria-label="Добавить">
                                 <option selected>Добавить</option>
                                 <option value="1">Один</option>
-                                <option value="2">Дваавыаывавыаывапыпыяпяывпяывпяыапывпяыпяывкпкывфкпфыапыпыпывп</option>
+                                <option value="2">Second</option>
                                 <option value="3">Три</option>
                                    
                             </select> 
@@ -47,11 +48,12 @@
 
                     <div class="h3 blueText">Заболевания</div>
                     <div class="my-3 justify-content-lg-center w-75 d-inline">
-                        @for (int i = 0; i < Model.Diagnozs.Count(); i++)
+                        @foreach (var visit in Model.Visitings)
+                            @for (int i = 0; i < visit.Diagnosis.Count(); i++)
                         {
-                            <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2" id="@(Model.Diagnozs[i].Id + 200000000)">
-                                @Model.Diagnozs[i].Name
-                                <button class="border-0 bg-transparent text-light ms-1" onclick="deliteDiagnoz(@Model.Numer, @Model.Diagnozs[i].Id)">
+                                <div class="text-light bg-blue-dark d-inline-block rounded-2 col-md-auto m-1 px-2" id="@(visit.Diagnosis[i].Id + 200000000)">
+                                    @visit.Diagnosis[i].Name
+                                    <button class="border-0 bg-transparent text-light ms-1" onclick="deliteDiagnoz(@Model.Numer, @visit.Diagnosis[i].Id)">
                                     <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>

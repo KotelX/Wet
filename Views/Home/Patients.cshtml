@@ -36,14 +36,18 @@
                                 <th scope="row">@patient.Numer</th>
                                 <td>@patient.Name</td>
                                 <td>
-                                    @foreach (var item in patient.Simptoms)
+                                    @foreach (var visit in patient.Visitings)
                                     {
-                                        @(item.Name + " ")
+                                        @foreach (var item in visit.Symptoms)
+                                        {
+                                            @(item.Name + " ")
+                                        }
                                     }
                                 </td>
                                 <td>
-                                    @foreach (var item in patient.Diagnozs)
+                                    @foreach (var visit in patient.Visitings)
                                     {
+                                        foreach(var item in visit.Diagnosis)
                                         @(item.Name + " ")
                                     }
                                 </td>

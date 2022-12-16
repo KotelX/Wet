@@ -10,7 +10,14 @@ namespace Wet.Models
         public long Id { get; set; }
         public string Name { get; set; }
         public long Numer { get; set; }
-        public List<Symptom> Simptoms { get; set; } = new List<Symptom>();
-        public List<Diagnosis> Diagnozs { get; set; } = new List<Diagnosis>();
+        public int Breed { get; set; }
+        public bool Gender { get; set; }
+        public string OwnerName { get; set; }
+        public string OwnerSurname { get; set; }
+        public string OwnerEmail { get; set; }
+        public string OwnerPhone { get; set; }
+        public string Comment { get; set; }
+        public DateTime Birthday { get; set; }
+        public List<Visiting> Visitings { get; set; } = new List<Visiting>();
     }
 }
